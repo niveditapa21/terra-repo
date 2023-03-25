@@ -21,7 +21,7 @@ jobs:
           uses: actions/checkout@v3
 
         - name: Configure AWS credentials
-          uses: aws-actions/configure-aws-credentials@v1
+          uses: aws-actions/configure-aws-credentials@v1-node16
           with:
              aws-access-key-id: "AKIAYPN35JCKQ4R3HI4P"
              aws-secret-access-key: "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"
@@ -29,7 +29,7 @@ jobs:
 
         - name: login to Amazon ECR
           id: login-ecr
-          uses: aws-actions/amazon-ecr-login@v1
+          uses: aws-actions/amazon-ecr-login@v1-node16
 
         - name: Build, tag, and push image to Amazon ECR
           id: build-image
@@ -44,14 +44,14 @@ jobs:
 
         - name: Fill in the new image ID in the Amazon ECS task definition
           id: task-def-1
-          uses: aws-actions/amazon-ecs-render-task-definition@v1
+          uses: aws-actions/amazon-ecs-render-task-definition@v1-node16
           with:
              task-definition: ${{ env.ECS_TD }}
              container-name: ${{ env.CONTAINER_NAME }}
              image: ${{ steps.build-image.outputs.image }}
 
         - name: Deploy Amazon ECS task definition
-          uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+          uses: aws-actions/amazon-ecs-deploy-task-definition@v1-node16
           with:
              task-definition: ${{ steps.task-def-1.output.task-definition }}
              service: ${{ env.ECS_SERVICE }}
