@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:582899026069:task-definition/app:6",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:582899026069:task-definition/app",
     "containerDefinitions": [
         {
             "name": "app",
@@ -23,7 +23,6 @@
     "taskRoleArn": "arn:aws:iam::582899026069:role/ecsInstanceRole21",
     "executionRoleArn": "arn:aws:iam::582899026069:role/ecsInstanceRole21",
     "networkMode": "awsvpc",
-    "revision": 6,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -53,7 +52,7 @@
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2023-03-26T07:17:39.714Z",
+    "registeredAt": "2023-03-26T07:35:46.984Z",
     "registeredBy": "arn:aws:iam::582899026069:user/nivedita",
     "tags": []
 }
