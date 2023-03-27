@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:582899026069:task-definition/app",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:******:task-definition/app",
     "containerDefinitions": [
         {
             "name": "app",
-            "image": "582899026069.dkr.ecr.us-east-1.amazonaws.com/app_repo",
+            "image": "******.dkr.ecr.us-east-1.amazonaws.com/app_repo",
             "cpu": 256,
             "memory": 512,
             "portMappings": [
@@ -20,8 +20,8 @@
         }
     ],
     "family": "app",
-    "taskRoleArn": "arn:aws:iam::582899026069:role/ecsInstanceRole21",
-    "executionRoleArn": "arn:aws:iam::582899026069:role/ecsInstanceRole21",
+    "taskRoleArn": "arn:aws:iam::******:role/ecsInstanceRole21",
+    "executionRoleArn": "arn:aws:iam::******:role/ecsInstanceRole21",
     "networkMode": "awsvpc",
     "volumes": [],
     "status": "ACTIVE",
@@ -53,6 +53,6 @@
     "cpu": "256",
     "memory": "512",
     "registeredAt": "2023-03-26T07:35:46.984Z",
-    "registeredBy": "arn:aws:iam::582899026069:user/nivedita",
+    "registeredBy": "arn:aws:iam::*********:user/nivedita",
     "tags": []
 }
